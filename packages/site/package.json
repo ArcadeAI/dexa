@@ -1,0 +1,10 @@
+{
+  "name": "@dexa/site",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "echo \"Marketing site dev server not configured yet\"",
+    "build": "echo \"Marketing site build not configured yet\"",
+    "clean": "rm -rf dist .next out"
+  }
+}

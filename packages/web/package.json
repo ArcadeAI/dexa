@@ -1,0 +1,13 @@
+{
+  "name": "@dexa/web",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "echo \"Web app dev server not configured yet\"",
+    "build": "echo \"Web app build not configured yet\"",
+    "clean": "rm -rf dist .next out"
+  },
+  "dependencies": {
+    "@dexa/core": "*"
+  }
+}

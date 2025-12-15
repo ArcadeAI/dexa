@@ -1,0 +1,10 @@
+{
+  "name": "@dexa/docs",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "echo \"Docs dev server not configured yet\"",
+    "build": "echo \"Docs build not configured yet\"",
+    "clean": "rm -rf dist .next out"
+  }
+}

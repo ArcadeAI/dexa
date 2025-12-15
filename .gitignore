@@ -1,6 +1,32 @@
+# Dependencies
 node_modules/
-dist/
+**/node_modules/
+
+# Build outputs
+/dist/
+**/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 *.log
-.DS_Store
+
+# TypeScript
+**/*.tsbuildinfo
+
+# Caches
+.next/
+.vercel/
+.nuxt/
+.temp/
+.turbo/
+**/.cache/
+
+# Env
 .env
-.env.local
+.env.*.local
+
+# Mac
+.DS_Store

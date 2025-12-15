@@ -1,0 +1,14 @@
+{
+  "name": "@dexa/desktop",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "echo \"Desktop app dev not configured yet\"",
+    "build": "echo \"Desktop app build not configured yet\"",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@dexa/core": "*",
+    "@dexa/agent": "*"
+  }
+}

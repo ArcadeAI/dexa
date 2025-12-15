@@ -1,0 +1,18 @@
+{
+  "name": "@dexa/cli",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "dexa": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@dexa/core": "*",
+    "@dexa/agent": "*"
+  }
+}

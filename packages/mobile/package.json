@@ -1,0 +1,12 @@
+{
+  "name": "@dexa/mobile",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "echo \"Mobile app dev not configured yet\"",
+    "build": "echo \"Mobile app build not configured yet\"",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@dexa/core": "*"
+  }
+}
