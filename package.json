@@ -11,10 +11,18 @@
     "build:apps": "npm run build -w @dexa/api && npm run build -w @dexa/cli && npm run build -w @dexa/web --if-present && npm run build -w @dexa/site --if-present && npm run build -w @dexa/docs --if-present && npm run build -w @dexa/desktop --if-present && npm run build -w @dexa/mobile --if-present",
     "dev": "npm run dev --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
-    "clean": "rm -rf packages/*/dist packages/*/node_modules node_modules"
+    "clean": "rm -rf packages/*/dist packages/*/node_modules node_modules",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "knip": "knip"
   },
   "devDependencies": {
     "@types/node": "^25.0.2",
+    "eslint": "^9.39.2",
+    "eslint-plugin-safeword": "^0.3.0",
+    "knip": "^5.73.4",
+    "prettier": "^3.7.4",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
