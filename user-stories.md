@@ -372,6 +372,58 @@
 
 ---
 
+### Strategy Document Development (Multi-Prompt)
+
+| Field | Value |
+|-------|-------|
+| **Persona** | Chief Executive Officer |
+| **Industry** | Any |
+| **User Story** | As CEO, I need to iteratively develop strategy documents by capturing ideas, doing research, generating reports, and sharing with my team. |
+| **Tools Involved** | Google Search, Google Docs, Google Drive, Gmail/Slack |
+| **Pattern** | Multi-prompt iterative workflow |
+
+**Prompt Sequence:**
+
+> **Prompt 1 (Capture):** "I want to work on strategy. I have this idea in mind - capture it for me and turn it into an actual narrative document so it's organized. Don't wordsmith it, just structure my thoughts."
+
+> **Prompt 2 (Iterate):** "Make it tighter and more understandable. Align it with our company strategy document [reference file]."
+
+> **Prompt 3 (Research):** "Go do deep research on [topic]. Look at what competitors are doing, find industry reports, and summarize the key trends."
+
+> **Prompt 4 (Generate):** "Based on that research, and based on this template [reference file], generate a strategy report for me."
+
+> **Prompt 5 (Share):** "This report looks great. Go share it with Alex for review."
+
+---
+
+### Internal Knowledge Search & Synthesis
+
+| Field | Value |
+|-------|-------|
+| **Persona** | Chief Executive Officer / Chief of Staff |
+| **Industry** | Enterprise |
+| **User Story** | As an executive, I need to search our internal knowledge base, pull relevant documents, and synthesize information across sources. |
+| **Tools Involved** | SharePoint, Google Drive, Confluence, Google Docs |
+
+**Prompt:**
+> "I need to prepare for the strategy offsite next week. Can you search our Google Drive and SharePoint for all documents related to our 2025 planning, find the latest competitive analysis from the strategy folder, pull the board feedback from our last meeting notes, and create a synthesis document that summarizes the key themes and open questions I should address?"
+
+---
+
+### Document Update & Distribution
+
+| Field | Value |
+|-------|-------|
+| **Persona** | Operations Manager |
+| **Industry** | Any |
+| **User Story** | As an ops manager, I need to update existing documents based on new information and distribute updates to stakeholders. |
+| **Tools Involved** | Google Drive, SharePoint, Google Docs, Slack, Gmail |
+
+**Prompt:**
+> "Our pricing just changed. Can you find our pricing documentation in Google Drive, update the customer-facing pricing sheet with the new tiers I'll describe, update the internal sales playbook in SharePoint with the new objection handling for the price increase, and then post to #sales that the docs have been updated with a summary of what changed?"
+
+---
+
 ## 9. Data & Analytics
 
 ### Ad-Hoc Analysis Request
@@ -492,7 +544,7 @@
 
 ## Appendix: Prompt Pattern Reference
 
-### Structure of Effective Multi-Tool Prompts
+### Pattern 1: Single Multi-Tool Prompt
 
 1. **Context**: Explain the situation or trigger
 2. **Data Sources**: Specify where to get information
@@ -500,11 +552,54 @@
 4. **Output**: Where to deliver results
 5. **Notification**: Who to inform
 
-### Example Pattern
-
+**Example:**
 > "[Context] I need to [goal]. Can you [action 1] from [source 1], [action 2] from [source 2], [process/analyze], [create output] in [destination], and [notify] in [channel]?"
 
 ---
 
-*Document generated: 2025-12-16*  
-*Source: Arcade customer conversations via HubSpot/Sybill*
+### Pattern 2: Multi-Prompt Iterative Workflow
+
+Some use cases require multiple prompts in sequence, with the user refining and directing between steps. This is particularly common for:
+
+- **Strategy development** - Capture → Research → Generate → Refine → Share
+- **Document creation** - Draft → Review → Incorporate feedback → Finalize
+- **Complex analysis** - Gather data → Analyze → Ask follow-up questions → Synthesize
+
+**Example Sequence:**
+
+```
+Prompt 1: "Capture this idea and structure it into a document"
+         ↓
+    [User reviews output]
+         ↓
+Prompt 2: "Make it tighter. Align with [reference document]"
+         ↓
+    [User reviews output]
+         ↓
+Prompt 3: "Do research on [related topic]"
+         ↓
+    [User reviews research]
+         ↓
+Prompt 4: "Based on that research and this template, generate the final report"
+         ↓
+Prompt 5: "Share it with [person/channel]"
+```
+
+**Key Insight:** The agent maintains context across prompts, allowing natural iterative refinement.
+
+---
+
+### Pattern 3: File Reference Prompts
+
+Users reference existing documents to provide context:
+
+- "Check this other document I worked on before"
+- "Based on this template..."
+- "Align it with our strategy document"
+
+**Tools Involved:** Google Drive, SharePoint, Confluence
+
+---
+
+*Document updated: 2025-12-17*  
+*Source: Arcade customer conversations, founder interviews*
